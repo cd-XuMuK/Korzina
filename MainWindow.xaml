@@ -1,0 +1,55 @@
+﻿<Window x:Class="Korzina.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Korzina"
+        mc:Ignorable="d" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Title="MainWindow" Height="450" Width="450">
+    
+        <Border Name="newBorder" CornerRadius="10" Background="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition />
+                    <RowDefinition Height="10
+                                   " />
+                </Grid.RowDefinitions>
+                <!--Заголовок-->
+                <Label Content="Регистрация" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0" FontSize="20"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Background="Transparent" BorderThickness="0" Padding="5" Click="Button_Click">
+                    <Border Background="Red" CornerRadius="8" >
+                        <Label Content="❌"/>
+                    </Border>
+                </Button>
+            </StackPanel>
+
+            <!--Основное содержание-->
+                <Border Grid.Row="1">
+                    <Grid>
+                        <StackPanel Orientation="Vertical" Height="340" Width="200">
+                           <Label Content="Фамилия" FontSize="18" FontWeight="Bold"/>
+                        <TextBox x:Name="Fam" FontSize="17" Margin="0 5"/>
+                        <Label Content="Имя" FontSize="18" FontWeight="Bold"/>
+                        <TextBox x:Name="Name" FontSize="17" Margin="0 5"/>
+                        <Label Content="Почта" FontSize="18" FontWeight="Bold"/>
+                        <TextBox x:Name="email" FontSize="17" Margin="0 5"/>
+                        <Label Content="Пароль" FontSize="18" FontWeight="Bold"/>
+                        <PasswordBox x:Name="pass" FontSize="17" Margin="0 5"/>
+                        <Button x:Name="reg" Background="Transparent" BorderThickness="0" Click="reg_Click">
+                            <Border Background="DarkKhaki" CornerRadius="8" Padding="10">
+                                <Label Content="Зарегестрироваться" FontSize="18" FontWeight="Bold"/>
+                            </Border>
+                        </Button>
+                    </StackPanel>
+                         
+                    </Grid>
+                </Border>
+                <!--Элемент захвата и изменения размера - работает только для прямоугольных окон-->
+                <ResizeGrip Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                        Visibility="Collapsed" IsTabStop="False" />
+            </Grid>
+        </Border>
+       
+</Window>
